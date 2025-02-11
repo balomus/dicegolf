@@ -1,5 +1,5 @@
 function dice_update()
-    if (btnp(❎) and dice.rolling == false) then
+    if (btnp(❎) and dice.rolling == false and ball.move <= 0) then
         dice.rolling=true
     end
 
@@ -18,6 +18,7 @@ function dice_roll()
     if dice.counter <= 0 then
         dice.rolling = false
         dice.counter = 15
+        ball.move = dice.sp - 15
     end
 
 end
