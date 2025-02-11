@@ -4,12 +4,14 @@ function objdraw(o)
     spr(o.spr, o.x, o.y)
 end
 
+-- dirs={'down', 'downleft', 'left', 'upleft', 'up', 'upright', 'right', 'downright'}
+
 function _init()
 
     ball = {
         sp=1,
-        x,
-        y,
+        x=0,
+        y=0,
         w=8,
         h=8,
         speed=0.5,
@@ -30,10 +32,16 @@ function _init()
 
     flag = {
         sp=32,
-        x,
-        y,
+        x=0,
+        y=0,
         w=8,
         h=8
+    }
+
+    destination = {
+        x=0,
+        y=0,
+        dir=5
     }
     
     --loop through the map
